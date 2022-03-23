@@ -69,7 +69,21 @@ body{
     border: 1px solid #eee
 }
 /* style current info other weather item */
-.current-info .others-items .the-weather-item{
+.current-info .others-items .weather-item{
     display: flex;
     justify-content: space-between;
 }
+
+/* style future forcast */
+.future-forecast{
+    background: rgba(24, 24, 27, 0.6);
+    padding: 25px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
