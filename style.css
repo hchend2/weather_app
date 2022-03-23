@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+/* import font from google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100; 200; 400; 700&display=swap');
 
 *{
     box-sizing: border-box;
@@ -6,17 +7,69 @@
     padding:0;
 }
 
+/* style the body */
 body{
-    background-image:url('https://www.istockphoto.com/photo/dramatic-painted-textured-canvas-and-muslin-cloth-studio-backdrop-gm1345645639-423652849');
     font-family: 'Poppins' sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hiden;
-    height: 100%;
-    background-color: #7e7272;
+    height: 100vh;
+    background-color: #57a4ad;
 }
-
+/* style container */
 .container {
-    padding: 20px 20px;
-    color: #ece4e4;
+    padding: 20px 70px;
+    color: #fff;
+}
+/* style current info */
+.current-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* style date container time */
+.date-cont .time{
+    font-size: 60px;
+}
+/* style data container am-pm */
+.date-cont #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
+}
+/* style date container font weight */
+.date-cont{
+    font-weight: 100;
+}
+/* style date container date */
+.date-cont .date{
+    font-size: 20px;
+}
+/* style location container */
+.location-container{
+    text-align: end;
+}
+/* style location container time zone */
+.location-container .time-zone{
+    font-size: 20px;
+    font-weight: 100;
+}
+/* style location container country */
+.location-container .country{
+    font-size: 15px;
+    font-weight: 700;
+}
+/* style current info other weather item */
+.current-info .others-items{
+    display: flex;
+    flex-direction: column;
+    background: rgba(24, 24, 27, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #eee
+}
+/* style current info other weather item */
+.current-info .others-items .the-weather-item{
+    display: flex;
+    justify-content: space-between;
 }
