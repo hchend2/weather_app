@@ -11,6 +11,8 @@ const currentTmpEl = document.getElementById('current-tmp');
 const daysArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const monthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+const myAPI_key = '7957244a263e63fd9238ba0d0a256dbd';
+
 setInterval(() =>{
     const time = new Date();
     const month =  time.getMonth();
@@ -25,3 +27,12 @@ setInterval(() =>{
     dateEl.innerHTML = daysArr[day] + ',' + date + ' ' + monthArr[month]
 
 }, 1000);
+
+
+function getWeatherData() {
+    navigator.geolocation.getCurrentPosition((success) => {
+        console.log(success);
+
+        let {latitude, longitude} = success.coords;
+    })
+}
