@@ -8,6 +8,8 @@ const weatherForecastEl = document.getElementById('weather-forecast');
 
 const currentTmpEl = document.getElementById('current-tmp');
 
+const daysArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const monthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 setInterval(() =>{
     const time = new Date();
@@ -18,5 +20,8 @@ setInterval(() =>{
     const hoursIn12HrFormat = hour >= 13 ? hour % 12 : hour;
     const minutes = time.getMinutes();
     const ampm = hour >= 12 ? 'PM' : 'AM';
-    timeEl.innerHTML = hoursIn12HrFormat + ':' + minutes + ' ' + <span id="am-pm">${ampm}</span>
+    timeEl.innerHTML = hoursIn12HrFormat + ':' + minutes + ' ' + `<span id="am-pm">${ampm}</span>`
+
+    dateEl.innerHTML = daysArr[day] + ',' + date + ' ' + monthArr[month]
+
 }, 1000);
